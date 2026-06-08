@@ -7,6 +7,105 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos adicionais para o vídeo */
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .video-placeholder {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+
+        .video-placeholder i {
+            font-size: 80px;
+            color: #4ade80;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .video-placeholder p {
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        .video-placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            transition: all 0.3s ease;
+        }
+
+        .video-placeholder:hover::before {
+            background: rgba(0,0,0,0.3);
+        }
+
+        .video-placeholder:hover i {
+            transform: translate(-50%, -50%) scale(1.1);
+            color: #22c55e;
+        }
+
+        #youtubePlayer {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            background: #000;
+        }
+
+        #youtubePlayer iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-section {
+            padding: 80px 5%;
+            background: linear-gradient(135deg, #0a0a0a, #1a1a2e);
+        }
+
+        @media (max-width: 768px) {
+            .video-placeholder i {
+                font-size: 50px;
+            }
+            .video-placeholder p {
+                font-size: 14px;
+                bottom: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <canvas id="bgCanvas"></canvas>
@@ -216,10 +315,11 @@
 
         <section class="video-section">
             <div class="video-container">
-                <div class="video-placeholder">
+                <div class="video-placeholder" id="videoPlaceholder" onclick="loadVideo()">
                     <i class="fas fa-play-circle"></i>
-                    <p>Veja o Agro Forte em ação</p>
+                    <p>▶ Clique para assistir o vídeo | Agro Forte em ação</p>
                 </div>
+                <div id="youtubePlayer" style="display: none;"></div>
             </div>
         </section>
     </main>
@@ -261,6 +361,113 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // Função para carregar o vídeo do YouTube ao clicar
+        function loadVideo() {
+            const placeholder = document.getElementById('videoPlaceholder');
+            const playerDiv = document.getElementById('youtubePlayer');
+            
+            // Esconde o placeholder
+            placeholder.style.display = 'none';
+            
+            // Mostra o player
+            playerDiv.style.display = 'block';
+            
+            // Cria o iframe do YouTube
+            const iframe = document.createElement('iframe');
+            // Substitua o ID do vídeo pelo desejado (aOXEIGgKSjc. é exemplo)
+            const videoId = 'aOXEIGgKSjc.'; // Altere para o ID do seu vídeo
+            iframe.src = `https://www.youtube.com/embed/${aOXEIGgKSjc}?rel=0&autoplay=1`;
+            iframe.title = 'YouTube video player - Agro Forte';
+            iframe.frameBorder = '0';
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+            iframe.allowFullscreen = true;
+            
+            playerDiv.appendChild(iframe);
+        }
+
+        // Scripts existentes do seu site (mantenha os que já tinha)
+        // Menu mobile
+        const menuMobile = document.querySelector('.menu-mobile');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (menuMobile) {
+            menuMobile.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+
+        // Modal
+        const modal = document.getElementById('sustainableModal');
+        const sustainableBtn = document.getElementById('sustainableBtn');
+        const closeModal = document.querySelector('.close-modal');
+        
+        if (sustainableBtn) {
+            sustainableBtn.addEventListener('click', () => {
+                modal.style.display = 'flex';
+            });
+        }
+        
+        if (closeModal) {
+            closeModal.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+        }
+        
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Explorar btn
+        const exploreBtn = document.getElementById('exploreBtn');
+        if (exploreBtn) {
+            exploreBtn.addEventListener('click', () => {
+                document.getElementById('topicos').scrollIntoView({ behavior: 'smooth' });
+            });
+        }
+
+        // Animações de números
+        const stats = document.querySelectorAll('.stat-number');
+        const animateNumbers = () => {
+            stats.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-target'));
+                let current = 0;
+                const increment = target / 50;
+                const updateNumber = () => {
+                    current += increment;
+                    if (current < target) {
+                        stat.textContent = Math.floor(current);
+                        requestAnimationFrame(updateNumber);
+                    } else {
+                        stat.textContent = target;
+                    }
+                };
+                updateNumber();
+            });
+        };
+
+        // Intersection Observer para animação dos números
+        const futureSection = document.querySelector('.future');
+        let animated = false;
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !animated) {
+                    animated = true;
+                    animateNumbers();
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        if (futureSection) observer.observe(futureSection);
+
+        // Efeito parallax do canvas (se existir)
+        const canvas = document.getElementById('bgCanvas');
+        if (canvas) {
+            // Seu código do canvas aqui
+        }
+    </script>
 </body>
 </html>
