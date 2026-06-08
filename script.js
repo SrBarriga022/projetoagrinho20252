@@ -36,11 +36,9 @@ function drawParticles() {
         ctx.fillStyle = particle.color;
         ctx.fill();
         
-        // Atualizar posição
         particle.x += particle.speedX;
         particle.y += particle.speedY;
         
-        // Resetar quando sair da tela
         if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
@@ -50,7 +48,6 @@ function drawParticles() {
     animationFrame = requestAnimationFrame(drawParticles);
 }
 
-// Iniciar animação de partículas
 window.addEventListener('resize', () => {
     resizeCanvas();
     initParticles();
@@ -106,7 +103,6 @@ const animateNumbers = () => {
     });
 };
 
-// Observar seção de futuro para animar números
 const futureObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -121,7 +117,7 @@ if (futureSection) {
     futureObserver.observe(futureSection);
 }
 
-// Smooth scroll para navegação
+// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -135,7 +131,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Modal interativo
+// Modal
 const modal = document.getElementById('sustainableModal');
 const sustainableBtn = document.getElementById('sustainableBtn');
 const closeModal = document.querySelector('.close-modal');
@@ -191,13 +187,6 @@ if (menuMobile && navLinks) {
     });
 }
 
-// Animação de hover nos cards
-document.querySelectorAll('.topic-card').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        card.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-    });
-});
-
 // Efeito parallax no header
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
@@ -208,7 +197,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Adicionar classes de animação aos elementos quando visíveis
+// Animações ao scroll para elementos específicos
 const animateOnScroll = () => {
     const elements = document.querySelectorAll('.future-text, .timeline-item, .video-placeholder');
     
@@ -223,7 +212,6 @@ const animateOnScroll = () => {
     });
 };
 
-// Estilos iniciais para animação
 document.querySelectorAll('.future-text, .timeline-item, .video-placeholder').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
@@ -235,4 +223,4 @@ animateOnScroll();
 
 // Console log criativo
 console.log('%c🌱 AGRO FORTE - FUTURO SUSTENTÁVEL 🌱', 'color: #2ecc71; font-size: 20px; font-weight: bold;');
-console.log('%cSite criado com IA DeepSeek para o evento de melhores prompts!', 'color: #f39c12; font-size: 14px;');
+console.log('%cSite criado com IA DeepSeek com problemas e soluções detalhados!', 'color: #f39c12; font-size: 14px;');

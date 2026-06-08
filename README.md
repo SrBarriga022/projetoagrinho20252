@@ -1,28 +1,54 @@
-# projetoagrinho20252
-# 🌾 AGRO FORTE - FUTURO SUSTENTÁVEL
+# 🌱 Agro Forte - Futuro Sustentável
 
-## 🚀 Site Animado para Evento de Melhores Prompts de IA
+![Agro Forte Banner](https://img.shields.io/badge/Agro-Forte-green?style=for-the-badge&logo=agriculture)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-### 📋 Sobre o Projeto
+## 📋 Sobre o Projeto
 
-Este site foi criado com **DeepSeek** para demonstrar o poder dos prompts de IA na criação de experiências web completas, animadas e responsivas. O tema escolhido foi **"Agro Forte Futuro Sustentável"**, destacando a união entre tecnologia avançada e práticas agrícolas sustentáveis.
+**Agro Forte** é uma landing page moderna e interativa desenvolvida para apresentar os pilares do agronegócio sustentável. O site combina design arrojado, animações fluidas e conteúdo informativo para demonstrar como a tecnologia pode revolucionar o campo de forma sustentável.
 
-### 🎨 Características
+### 🎯 Objetivo
 
-- ✨ **Animações fluidas**: Partículas de fundo, cards com hover effects, timeline interativa
-- 🌿 **Design responsivo**: Funciona perfeitamente em desktop, tablet e mobile
-- 🎯 **Seções completas**: Hero section, tópicos principais, linha do tempo, estatísticas
-- 💚 **Paleta de cores sustentável**: Tons de verde, terra e dourado
-- 📱 **Menu mobile**: Navegação adaptável para dispositivos móveis
-- 🎬 **Modal interativo**: Informações adicionais sobre tecnologia verde
-- 📊 **Animações de números**: Contagem dinâmica nas estatísticas
+Apresentar soluções inovadoras para os desafios do agronegócio, destacando:
+- Problemas reais enfrentados no campo
+- Soluções tecnológicas sustentáveis
+- Metas para o futuro da agricultura
+- Dados e estatísticas do setor
 
-### 🛠️ Tecnologias Utilizadas
+## ✨ Funcionalidades
 
-- **HTML5**: Estrutura semântica e moderna
-- **CSS3**: Grid, Flexbox, animações keyframes, variáveis CSS
-- **JavaScript**: Animações, scroll suave, observer API, canvas para partículas
-- **Font Awesome**: Ícones vetoriais
-- **Google Fonts**: Fonte Inter
+### 🎨 Design e Interface
+- ✅ **Fundo animado com partículas** - Efeito visual dinâmico de pontos verdes flutuantes
+- ✅ **Efeito Glitch no título** - Animação moderna e impactante
+- ✅ **Elementos flutuantes** - Ícones que se movem suavemente pela tela
+- ✅ **Design responsivo** - Adaptação perfeita para mobile, tablet e desktop
+- ✅ **Cards interativos** - Animações hover e entrada suave ao scroll
 
-### 📂 Estrutura de Arquivos
+### 📊 Conteúdo Interativo
+- ✅ **6 Pilares do Agro Sustentável** com:
+  - 🔴 Problema identificado (em vermelho)
+  - 🟢 Solução tecnológica (em azul)
+  - 📈 Estatísticas de impacto
+- ✅ **Timeline interativa** - Metas para 2024, 2026, 2028 e 2030
+- ✅ **Estatísticas animadas** - Números que contam ao entrar na tela
+- ✅ **Modal interativo** - Informações sobre tecnologia verde
+
+### 🎮 Interatividade
+- ✅ **Menu mobile responsivo** - Adaptação para dispositivos móveis
+- ✅ **Smooth scroll** - Navegação suave entre seções
+- ✅ **Efeito parallax** - Movimento sutil do header ao rolar
+- ✅ **Botões interativos** - CTA com hover effects
+
+## 🛠️ Tecnologias Utilizadas
+
+| Tecnologia | Versão | Finalidade |
+|------------|--------|-------------|
+| HTML5 | - | Estrutura do site |
+| CSS3 | - | Estilização e animações |
+| JavaScript | ES6+ | Interatividade e animações |
+| Google Fonts | Inter | Tipografia moderna |
+| Font Awesome | 6.0 | Ícones vetoriais |
+
+## 📂 Estrutura do Projeto
