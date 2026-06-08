@@ -1,1 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Agro Forte | Futuro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <canvas id="bgCanvas"></canvas>
+    
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <span>Agro<span class="highlight">Forte</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#topicos">Tópicos</a></li>
+                <li><a href="#futuro">Futuro</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="menu-mobile">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
 
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="AGRO FORTE">AGRO FORTE</h1>
+                <p class="subtitle">Futuro Sustentável</p>
+                <div class="hero-description">
+                    <p>Inovação que alimenta o mundo, <span class="gradient-text">respeitando a terra</span></p>
+                </div>
+                <div class="cta-buttons">
+                    <button class="btn primary" id="exploreBtn">Explorar Agora</button>
+                    <button class="btn secondary" id="sustainableBtn">Tecnologia Verde</button>
+                </div>
+            </div>
+            <div class="floating-elements">
+                <div class="float-item"><i class="fas fa-tractor"></i></div>
+                <div class="float-item"><i class="fas fa-solar-panel"></i></div>
+                <div class="float-item"><i class="fas fa-seedling"></i></div>
+                <div class="float-item"><i class="fas fa-water"></i></div>
+            </div>
+        </section>
+
+        <section id="topicos" class="topics">
+            <h2 class="section-title">Pilares do <span class="gradient-text">Agro Sustentável</span></h2>
+            <div class="topics-grid">
+                <div class="topic-card" data-delay="0">
+                    <div class="card-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Agricultura 4.0</h3>
+                    <p>Sensores IoT, drones e IA para monitoramento preciso de plantações e recursos hídricos.</p>
+                    <div class="card-stats">
+                        <span>+40% eficiência</span>
+                    </div>
+                </div>
+                <div class="topic-card" data-delay="1">
+                    <div class="card-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h3>Economia Circular</h3>
+                    <p>Aproveitamento de resíduos, compostagem e bioenergia gerada a partir da própria produção.</p>
+                    <div class="card-stats">
+                        <span>-60% resíduos</span>
+                    </div>
+                </div>
+                <div class="topic-card" data-delay="2">
+                    <div class="card-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Irrigação Inteligente</h3>
+                    <p>Sistemas automatizados que reduzem consumo de água em até 50% com máxima produtividade.</p>
+                    <div class="card-stats">
+                        <span>50% economia</span>
+                    </div>
+                </div>
+                <div class="topic-card" data-delay="3">
+                    <div class="card-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3>Energia Renovável</h3>
+                    <p>Biogás, solar e eólica tornando propriedades autossuficientes e sustentáveis.</p>
+                    <div class="card-stats">
+                        <span>100% limpa</span>
+                    </div>
+                </div>
+                <div class="topic-card" data-delay="4">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Rastreabilidade Digital</h3>
+                    <p>Blockchain do campo à mesa, garantindo origem sustentável e justa.</p>
+                    <div class="card-stats">
+                        <span>total transparência</span>
+                    </div>
+                </div>
+                <div class="topic-card" data-delay="5">
+                    <div class="card-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Crédito de Carbono</h3>
+                    <p>Agricultores remunerados por práticas que sequestram carbono e preservam biomas.</p>
+                    <div class="card-stats">
+                        <span>nova renda</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="futuro" class="future">
+            <div class="future-container">
+                <div class="future-text">
+                    <h2>O Futuro <span class="gradient-text">Já Começou</span></h2>
+                    <p>O Brasil lidera a revolução do agro sustentável. Com tecnologia de ponta e respeito ao meio ambiente, produzimos mais utilizando menos recursos.</p>
+                    <div class="future-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-target="2050">0</span>
+                            <span class="stat-label">bilhões de pessoas alimentadas</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="30">0</span>
+                            <span class="stat-label">% redução de emissões</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="15">0</span>
+                            <span class="stat-label">milhões de empregos verdes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="future-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-chart-pie"></i>
+                        <div class="pie-animation"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sustainable-timeline">
+            <h2>Caminho para <span class="gradient-text">2030</span></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-content">
+                        <i class="fas fa-check-circle"></i>
+                        <p>40% da matriz energética do agro renovável</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2026</div>
+                    <div class="timeline-content">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Rastreabilidade total da cadeia produtiva</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2028</div>
+                    <div class="timeline-content">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Zero desmatamento ilegal consolidado</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2030</div>
+                    <div class="timeline-content">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Líder mundial em agricultura regenerativa</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-section">
+            <div class="video-container">
+                <div class="video-placeholder">
+                    <i class="fas fa-play-circle"></i>
+                    <p>Veja o Agro Forte em ação</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contato">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-leaf"></i>
+                <span>AgroForte Sustentável</span>
+                <p>Cultivando o amanhã, hoje</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <a href="#home">Início</a>
+                <a href="#topicos">Tópicos</a>
+                <a href="#futuro">Futuro</a>
+            </div>
+            <div class="footer-social">
+                <h4>Redes</h4>
+                <div class="social-icons">
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Agro Forte Futuro Sustentável - Tecnologia e natureza em harmonia</p>
+        </div>
+    </footer>
+
+    <div class="modal" id="sustainableModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>🌱 Tecnologia Verde no Agro</h2>
+            <p>O agro sustentável combina inovação e conservação. Agricultura de precisão reduz insumos, biotecnologia cria variedades resistentes e sistemas integrados recuperam pastagens degradadas.</p>
+            <p><strong>Destaques:</strong> Agricultura regenerativa, carbono neutro, pagamento por serviços ambientais.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
